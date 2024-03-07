@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Academia</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    .corpo {
+      position: relative;
+      width: 600px; /* Largura da imagem do corpo */
+      margin: 50px auto;
+    }
+    .musculo {
+      position: absolute;
+      background-color: transparent; /* Cor de fundo transparente */
+      cursor: pointer;
+    }
+    /* Posicionamento dos músculos */
+    .peito {
+    top: 150px;
+    left: 183px;
+    width: 60px;
+    height: 30px;
+
+    }
+    .deltoides {
+    top: 140px;
+    left: 155px;
+    width: 30px;
+    height: 30px;
+    }
+    .abdomen {
+    top: 175px;
+    left: 193px;
+    width: 40px;
+    height: 80px;
+  }
+    .biceps {
+    top: 165px;
+    left: 160px;
+    width: 20px;
+    height: 50px;
+  }
+    /* Adicione mais estilos conforme necessário */
+  </style>
+</head>
+<body>
+  <div class="corpo">
+    <img src="https://img.myloview.com.br/posters/mapa-do-musculo-humano-do-corpo-humano-com-os-principais-nomes-musculares-frente-e-verso-vector-eps-10-ilustracao-400-109047536.jpg" alt="Corpo Humano" width="600">
+    <!-- Músculos -->
+    <div class="musculo peito" onclick="location.href='peito.html';"></div>
+    <div class="musculo deltoides" onclick="location.href='deltoides.html';"></div>
+    <div class="musculo abdomen" onclick="location.href='abdomen.html';"></div>
+    <div class="musculo biceps" onclick="location.href='biceps.html';"></div>
+    <!-- Adicione mais músculos conforme necessário -->
+  </div>
+</body>
+</html>
