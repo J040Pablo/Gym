@@ -1,127 +1,169 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Academia</title>
+  <title>Gym</title>
+  <h1>No Pain, No gain</h1>
   <style>
     body {
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
     }
-    .corpo {
+    .body {
       position: relative;
       width: 600px;
       margin: 50px auto;
     }
-    .musculo {
+    .muscle {
       position: absolute;
       background-color: transparent;
       cursor: pointer;
     }
-    /* Posicionamento dos músculos */
-    .peito {
-    top: 150px;
-    left: 183px;
-    width: 60px;
-    height: 30px;
-
+    /* Original Muscle Positions */
+    .chest {
+      top: 130px;
+      left: 400px;
+      width: 90px;
+      height: 60px;
     }
-    .deltoides {
-    top: 140px;
-    left: 155px;
-    width: 30px;
-    height: 30px;
+    .deltoids {
+      top: 125px;
+      left: 490px;
+      width: 40px;
+      height: 40px;
     }
     .abdomen {
-    top: 175px;
-    left: 193px;
-    width: 40px;
-    height: 80px;
-  }
+      top: 200px;
+      left: 405px;
+      width: 80px;
+      height: 80px;
+    }
     .biceps {
-    top: 165px;
-    left: 160px;
-    width: 20px;
-    height: 50px;
-  }
-  .obliques {
-    top: 180px;
-    left: 185px;
-    width: 15px;
-    height: 70px;
-  }
-  .quadriceps {
-    top: 225px;
-    left: 175px;
-    width: 75px;
-    height: 90px;
-  }
-  .trapezio {
-    top: 125px;
-    left: 188px;
+      top: 170px;
+      left: 365px;
+      width: 25px;
+      height: 50px;
+    }
+    .quadriceps {
+      top: 310px;
+      left: 450px;
+      width: 60px;
+      height: 125px;
+    }
+    .trapezius {
+    top: 115px;
+    left: 400px;
     width: 50px;
     height: 20px;
-  }
-  .trapezio2 {
-    top: 125px;
-    left: 360px;
-    width: 60px;
-    height: 40px;
-  }
-  .triceps {
-    top: 160px;
-    left: 420px;
-    width: 25px;
-    height: 50px;
-  }
-
-  .latissimodorso {
-    top: 155px;
-    left: 360px;
-    width: 60px;
-    height: 90px;
-  }
-  .gluteos {
-    top: 225px;
-    left: 350px;
-    width: 80px;
-    height: 51px;
-  }
-  .posteriordecoxa {
-    top: 275px;
-    left: 350px;
-    width: 80px;
-    height: 45px;
-  }
-  .panturrilha {
-    top: 325px;
-    left: 355px;
-    width: 70px;
-    height: 50px;
-  }
-    
+    }
+    .upperBack {
+    top: 120px;
+    left: 115px;
+    width: 100px;
+    height: 80px;
+    }
+    .triceps {
+      top: 125px;
+      left: 65px;
+      width: 50px;
+      height: 25px;
+    }
+    .latissimusdorsi {
+      top: 190px;
+      left: 132px;
+      width: 70px;
+      height: 70px;
+    }
+    .glutes {
+      top: 260px;
+      left: 122px;
+      width: 90px;
+      height: 75px;
+    }
+    .hamstrings {
+      top: 330px;
+      left: 170px;
+      width: 45px;
+      height: 90px;
+    }
+    .calf {
+      top: 430px;
+      left: 170px;
+      width: 45px;
+      height: 140px;
+    }
+    /* Duplicated Muscle Positions */
+    .deltoids2 {
+      top: 125px;
+      left: 365px;
+      width: 40px;
+      height: 40px;
+    }
+    .hamstrings2 {
+      top: 330px;
+      left: 115px;
+      width: 45px;
+      height: 90px;
+    }
+    .triceps2 {
+      top: 125px;
+      left: 225px;
+      width: 50px;
+      height: 25px;
+    }
+    .trapezius2 {
+      top: 115px;
+      left: 450px;
+      width: 50px;
+      height: 20px;
+    }
+    .quadriceps2 {
+      top: 310px;
+      left: 380px;
+      width: 60px;
+      height: 125px;
+    }
+    .biceps2 {
+      top: 170px;
+      left: 500px;
+      width: 25px;
+      height: 50px;
+    }
+    .calf2 {
+      top: 430px;
+      left: 117px;
+      width: 45px;
+      height: 140px;
+    }
   </style>
 </head>
 <body>
-  <div class="corpo">
-    <img src="https://img.myloview.com.br/posters/mapa-do-musculo-humano-do-corpo-humano-com-os-principais-nomes-musculares-frente-e-verso-vector-eps-10-ilustracao-400-109047536.jpg" alt="Corpo Humano" width="600">
-    <!-- Músculos -->
-    <section class="musculo peito" onclick="location.href='peito.html';"></section>
-    <section class="musculo deltoides" onclick="location.href='deltoides.html';"></section>
-    <section class="musculo abdomen" onclick="location.href='abdomen.html';"></section>
-    <section class="musculo biceps" onclick="location.href='biceps.html';"></section>
-    <section class="musculo obliques" onclick="location.href='obliques.html';"></section>
-    <section class="musculo quadriceps" onclick="location.href='quadriceps.html';"></section>
-    <section class="musculo trapezio" onclick="location.href='trapezio.html';"></section>
-    <section class="musculo trapezio2" onclick="location.href='trapezio2.html';"></section>
-    <section class="musculo triceps" onclick="location.href='triceps.html';"></section>
-    <section class="musculo latissimodorso" onclick="location.href='latissimodorso.html';"></section>
-    <section class="musculo gluteos" onclick="location.href='gluteos.html';"></section>
-    <section class="musculo posteriordecoxa" onclick="location.href='posteriordecoxa.html';"></section>
-    <section class="musculo panturrilha" onclick="location.href='panturrilha.html';"></section>
+  <div class="body">
+    <img src="imagens/WhatsApp Image 2024-03-07 at 20.15.26.jpeg" alt="Human Body" width="600">
+    <!-- Original Muscles -->
+    <section class="muscle chest" onclick="location.href='chest.html';"></section>
+    <section class="muscle deltoids" onclick="location.href='deltoids.html';"></section>
+    <section class="muscle abdomen" onclick="location.href='abdomen.html';"></section>
+    <section class="muscle biceps" onclick="location.href='biceps.html';"></section>
+    <section class="muscle quadriceps" onclick="location.href='quadriceps.html';"></section>
+    <section class="muscle trapezius" onclick="location.href='trapezius.html';"></section>
+    <section class="muscle upperBack" onclick="location.href='upperBack.html';"></section>
+    <section class="muscle triceps" onclick="location.href='triceps.html';"></section>
+    <section class="muscle latissimusdorsi" onclick="location.href='latissimusdorsi.html';"></section>
+    <section class="muscle glutes" onclick="location.href='glutes.html';"></section>
+    <section class="muscle hamstrings" onclick="location.href='hamstrings.html';"></section>
+    <section class="muscle calf" onclick="location.href='calf.html';"></section>
     
+    <!-- Duplicated Muscles -->
+    <section class="muscle deltoids2" onclick="location.href='deltoids.html';"></section>
+    <section class="muscle hamstrings2" onclick="location.href='hamstrings.html';"></section>
+    <section class="muscle triceps2" onclick="location.href='triceps.html';"></section>
+    <section class="muscle trapezius2" onclick="location.href='trapezius.html';"></section>
+    <section class="muscle quadriceps2" onclick="location.href='quadriceps.html';"></section>
+    <section class="muscle biceps2" onclick="location.href='biceps.html';"></section>
+    <section class="muscle calf2" onclick="location.href='calf.html';"></section>
   </div>
 </body>
 </html>
