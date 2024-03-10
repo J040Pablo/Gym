@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gym</title>
-  <h1>No Pain, No gain</h1>
+  <title>BeFit</title>
+  <center>
+    <h1>BeFit</h1>
+  </center>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
+    nav {
+      margin-top: 35px;
     }
     .body {
       position: relative;
@@ -94,7 +94,34 @@
       width: 45px;
       height: 140px;
     }
+
+    .ForeamWorkout {
+      top: 225px;
+      left: 357px;
+      width: 25px;
+      height: 100px;
+    } 
+    
     /* Duplicated Muscle Positions */
+
+    .ForeamWorkout2 {
+      top: 225px;
+      left: 510px;
+      width: 25px;
+      height: 100px;
+    }
+    .ForeamWorkout3 {
+      top: 70px;
+      left: 230px;
+      width: 70px;
+      height: 50px;
+    }
+    .ForeamWorkout4 {
+      top: 70px;
+      left: 30px;
+      width: 70px;
+      height: 50px;
+    }
     .deltoids2 {
       top: 125px;
       left: 365px;
@@ -140,8 +167,16 @@
   </style>
 </head>
 <body>
+  <header>
+    <nav>
+      <center>
+        <a href="Inicio.html">Home</a>
+      </center>
+    </nav>
+  </header>
+  <h2>Click on the desired muscle to view workouts for it.</h2>
   <div class="body">
-    <img src="imagens/WhatsApp Image 2024-03-07 at 20.15.26.jpeg" alt="Human Body" width="600">
+    <img src="WhatsApp_Image_2024-03-07_at_20.15.26-removebg-preview (1).png" alt="Human Body" width="600">
     <!-- Original Muscles -->
     <section class="muscle chest" onclick="location.href='chest.html';"></section>
     <section class="muscle deltoids" onclick="location.href='deltoids.html';"></section>
@@ -155,6 +190,7 @@
     <section class="muscle glutes" onclick="location.href='glutes.html';"></section>
     <section class="muscle hamstrings" onclick="location.href='hamstrings.html';"></section>
     <section class="muscle calf" onclick="location.href='calf.html';"></section>
+    <section class="muscle ForeamWorkout" onclick="location.href='ForeamWorkout.html';"></section>
     
     <!-- Duplicated Muscles -->
     <section class="muscle deltoids2" onclick="location.href='deltoids.html';"></section>
@@ -164,6 +200,9 @@
     <section class="muscle quadriceps2" onclick="location.href='quadriceps.html';"></section>
     <section class="muscle biceps2" onclick="location.href='biceps.html';"></section>
     <section class="muscle calf2" onclick="location.href='calf.html';"></section>
+    <section class="muscle ForeamWorkout2" onclick="location.href='ForeamWorkout.html';"></section>
+    <section class="muscle ForeamWorkout3" onclick="location.href='ForeamWorkout.html';"></section>
+    <section class="muscle ForeamWorkout4" onclick="location.href='ForeamWorkout.html';"></section>
   </div>
 </body>
 </html>
