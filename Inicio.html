@@ -4,23 +4,49 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>BeFit</title>
-  <center>
-    <h1>BeFit</h1>
-  </center>
   <style>
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 10px 0;
+      text-align: center;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+    }
+
     nav {
       margin-top: 35px;
     }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    body {
+      margin-top: 50px;
+    }
+
     .body {
       position: relative;
       width: 600px;
       margin: 50px auto;
     }
+
     .muscle {
       position: absolute;
       background-color: transparent;
       cursor: pointer;
     }
+
     /* Original Muscle Positions */
     .chest {
       top: 130px;
@@ -180,14 +206,17 @@
 </head>
 <body>
   <header>
+    <h1>BeFit</h1>
     <nav>
-      <center>
-        <a href="Inicio.html">Home</a>
-      </center>
+      <a href="Inicio.html">Home</a>
+        <a href="workoutsByMusclegroup.html">Workouts by Muscle Group</a>
+        <a href="trainingPrograms.html">Training Programs</a>
+        <a href="login.html">Login</a>
     </nav>
+        
   </header>
   <h2>Click on the desired muscle to view workouts for it.</h2>
-  <div class="body">
+  <section class="body">
     <img src="imagens/imagens/WhatsApp_Image_2024-03-07_at_20.15.26-removebg-preview (1).png" alt="Human Body" width="600">
     <!-- Original Muscles -->
     <section class="muscle chest" onclick="location.href='chest.html';"></section>
@@ -217,11 +246,9 @@
     <section class="muscle ForeamWorkout2" onclick="location.href='ForeamWorkout.html';"></section>
     <section class="muscle ForeamWorkout3" onclick="location.href='ForeamWorkout.html';"></section>
     <section class="muscle ForeamWorkout4" onclick="location.href='ForeamWorkout.html';"></section>
-  </div>
+  </section>
   <footer>
-    <p>© 2024 BiFit. Todos os direitos reservados.</p>
+    <p>© 2024 BeFit. All rights reserved.</p>
   </footer>
-</body>
-</html>
 </body>
 </html>
