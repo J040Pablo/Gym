@@ -1,223 +1,35 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>BeFit</title>
+  <link type ="text/css" rel="stylesheet" href="index.css"/>
   <link rel="shortcut icon" href="imagens/icone.png" type="image/x-icon">
-  <style>
-    header {
-      background-color: #333;
-      color: #fff;
-      padding: 10px 0;
-      text-align: center;
-      position: fixed;
-      width: 100%;
-      top: 0;
-      left: 0;
-      z-index: 1000;
-    }
-
-    nav {
-      margin-top: 35px;
-    }
-
-    nav a {
-      color: #fff;
-      text-decoration: none;
-      margin: 0 10px;
-    }
-
-    nav a:hover {
-      text-decoration: underline;
-    }
-
-    body {
-      margin-top: 50px;
-    }
-
-    .body {
-      position: relative;
-      width: 600px;
-      margin: 50px auto;
-    }
-
-    .muscle {
-      position: absolute;
-      background-color: transparent;
-      cursor: pointer;
-    }
-
-    /* Original Muscle Positions */
-    .chest {
-      top: 130px;
-      left: 400px;
-      width: 90px;
-      height: 60px;
-    }
-    .deltoids {
-      top: 125px;
-      left: 490px;
-      width: 40px;
-      height: 40px;
-    }
-    .abdomen {
-      top: 200px;
-      left: 405px;
-      width: 80px;
-      height: 80px;
-    }
-    .biceps {
-      top: 170px;
-      left: 365px;
-      width: 25px;
-      height: 50px;
-    }
-    .quadriceps {
-      top: 310px;
-      left: 450px;
-      width: 60px;
-      height: 125px;
-    }
-    .trapezius {
-    top: 115px;
-    left: 400px;
-    width: 50px;
-    height: 20px;
-    }
-    .upperBack {
-    top: 120px;
-    left: 115px;
-    width: 100px;
-    height: 80px;
-    }
-    .triceps {
-      top: 125px;
-      left: 65px;
-      width: 50px;
-      height: 25px;
-    }
-    .latissimusdorsi {
-      top: 190px;
-      left: 132px;
-      width: 70px;
-      height: 70px;
-    }
-    .glutes {
-      top: 260px;
-      left: 122px;
-      width: 90px;
-      height: 75px;
-    }
-    .hamstrings {
-      top: 330px;
-      left: 170px;
-      width: 45px;
-      height: 90px;
-    }
-    .calf {
-      top: 430px;
-      left: 170px;
-      width: 45px;
-      height: 140px;
-    }
-
-    .ForeamWorkout {
-      top: 225px;
-      left: 357px;
-      width: 25px;
-      height: 100px;
-    } 
-    
-    /* Duplicated Muscle Positions */
-
-    .ForeamWorkout2 {
-      top: 225px;
-      left: 510px;
-      width: 25px;
-      height: 100px;
-    }
-    .ForeamWorkout3 {
-      top: 70px;
-      left: 230px;
-      width: 70px;
-      height: 50px;
-    }
-    .ForeamWorkout4 {
-      top: 70px;
-      left: 30px;
-      width: 70px;
-      height: 50px;
-    }
-    .deltoids2 {
-      top: 125px;
-      left: 365px;
-      width: 40px;
-      height: 40px;
-    }
-    .hamstrings2 {
-      top: 330px;
-      left: 115px;
-      width: 45px;
-      height: 90px;
-    }
-    .triceps2 {
-      top: 125px;
-      left: 225px;
-      width: 50px;
-      height: 25px;
-    }
-    .trapezius2 {
-      top: 115px;
-      left: 450px;
-      width: 50px;
-      height: 20px;
-    }
-    .quadriceps2 {
-      top: 310px;
-      left: 380px;
-      width: 60px;
-      height: 125px;
-    }
-    .biceps2 {
-      top: 170px;
-      left: 500px;
-      width: 25px;
-      height: 50px;
-    }
-    .calf2 {
-      top: 430px;
-      left: 117px;
-      width: 45px;
-      height: 140px;
-    }
-    .calf3 {
-      top: 430px;
-      left: 365px;
-      width: 45px;
-      height: 140px;
-    }
-    .calf4 {
-      top: 430px;
-      left: 480px;
-      width: 45px;
-      height: 140px;
-    }
-  </style>
-</head>
+  </head>
 <body>
   <header>
-    <h1>BeFit</h1>
+    <section id="logo">
+    <img src="imagens/icone.png" alt="logo" width="100">
+  </section>
+  </section>
     <nav>
+      <section id = "linksNav">
       <a href="Inicio.html">Home</a>
         <a href="workoutsByMusclegroup.html">Workouts by Muscle Group</a>
         <a href="trainingPrograms.html">Training Programs</a>
         <a href="login.html">Login</a>
+      </section>
     </nav>
     </header>
-    <br><br><br><br><br><br><br>
-  <h2>Click on the desired muscle to view workouts for it.</h2>
-  <section class="body">
+  <main>
+    <section id = "textHome">
+  <h2>Welcome to our fitness training website!</h2>
+  <p>Aqui, você embarcará em uma jornada em direção a um você mais saudável e mais forte. Nosso mapa corporal interativo permite que você mergulhe profundamente em grupos musculares específicos, fornecendo treinos personalizados para ajudá-lo a alcançar seus objetivos de fitness. Seja você está procurando construir força, aumentar flexibilidade ou melhorar resistência, nós temos o que você precisa.</p>
+  <p>Explore nossa interface intuitiva clicando em diferentes grupos musculares para descobrir uma variedade de exercícios projetados para desafiar e transformar seu corpo. Desde rotinas amigáveis para iniciantes até treinos avançados, há algo aqui para todos, independentemente do seu nível de fitness ou experiência.</p>
+  </section>
+  <section id="corpo">
     <img src="imagens/imagens/WhatsApp_Image_2024-03-07_at_20.15.26-removebg-preview (1).png" alt="Human Body" width="600">
     <!-- Original Muscles -->
     <section class="muscle chest" onclick="location.href='chest.html';"></section>
@@ -247,14 +59,14 @@
     <section class="muscle ForeamWorkout2" onclick="location.href='ForeamWorkout.html';"></section>
     <section class="muscle ForeamWorkout3" onclick="location.href='ForeamWorkout.html';"></section>
     <section class="muscle ForeamWorkout4" onclick="location.href='ForeamWorkout.html';"></section>
-    <center>
     <audio controls autoplay>
       <source src = "Rock.mp3.mp3" type = "audio/mpeg">
-</audio>
-    </center>
+</audio> 
   </section>
-</body>
+</main>
 <footer>
   <p>© 2024 BeFit. All rights reserved.</p>
 </footer>
+</body>
+
 </html>
