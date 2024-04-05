@@ -1,9 +1,14 @@
 #logo {
   font-family: "Comic Sans MS", cursive;
 }
-
+/* Estilos gerais */
 body {
   margin: 0;
+}
+
+#corpo img {
+  margin: 0 auto;
+  display: block;
 }
 
 header {
@@ -14,11 +19,14 @@ header {
   padding: 0;
   font-weight: 700;
   text-align: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
 }
 
-#linksNav {
-  text-align: center;
-  font-stretch: normal;
+nav {
+  display: flex;
+  justify-content: center;
 }
 
 nav a {
@@ -27,119 +35,325 @@ nav a {
   margin-right: 25px;
 }
 
-main {
-  border-top: 12px solid transparent;
-  border-left: 20px solid transparent;
+nav a:visited {
+  color: gray;
 }
 
-#corpo {
-  text-align: center;
+nav a:hover {
+  color: rgb(207, 40, 40);
+}
+
+main {
+  margin-top: 150px;
+}
+
+#logo {
+  font-family: "Comic Sans MS", cursive;
 }
 
 #textHome {
   font-size: 18px;
 }
 
+.muscles {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.muscle {
+  width: 100px;
+  height: 100px;
+  background-size: cover;
+  transition: transform 0.3s;
+}
+
+
+/* Media query para dispositivos menores que 768px */
+@media only screen and (max-width: 768px) {
+  header {
+    padding: 10px;
+  }
+
+  nav a {
+    margin-right: 15px;
+  }
+
+  .muscles {
+    display: none;
+  }
+}
+
+/* Media query para dispositivos menores que 480px */
+@media only screen and (max-width: 480px) {
+  header {
+    padding: 5px;
+  }
+
+  nav a {
+    margin-right: 10px;
+  }
+
+  #textHome {
+    font-size: 16px;
+  }
+}
+/*span*/
+.highlighted-code {
+  color: blue;
+  font-weight: bold; 
+}
+.shoulder {
+  position: absolute;
+  top: 476px;
+  left: 863px;
+  width: 60px;
+  height: 60px;
+  z-index: 999;
+  transition: transform 0.3s ease, width 0.3s ease, height 0.3s ease;
+}
+
+.shoulder:hover {
+  transform: scale(1.2);
+  width: 62px; /* Aumenta a largura do botão em 20% */
+  height: 62px; /* Aumenta a altura do botão em 20% */
+}
+
 .chest {
   position: absolute;
-  top: 550px;
-  left: 505px;
-  width: 90px;
+  top: 505px; /* Ajuste conforme necessário */
+  left: 770px; /* Ajuste conforme necessário */
+  width: 100px;
   height: 60px;
+  background-image: url('imagens/peitoral.png');
+  z-index: 999;
+  transition: transform 0.3s ease, width 0.3s ease, height 0.3s ease;
 }
 
-.deltoids {
-  top: 535px;
-  left: 600px;
-  width: 40px;
-  height: 40px;
+.chest:hover {
+  transform: scale(1.2);
+  width: 110px; /* Aumenta a largura do botão em 20% */
+  height: 62px; /* Aumenta a altura do botão em 20% */
 }
-
 
 .abdomen {
   position: absolute;
-  top: 615px;
-  left: 512px;
-  width: 80px;
-  height: 80px;
+  top: 560px; /* Ajuste conforme necessário */
+  left: 773px; /* Ajuste conforme necessário */
+  width: 90px;
+  height: 120px;
+  background-image: url('imagens/abdomen.png');
+  z-index: 1; /* Defina um z-index menor para que fique abaixo do antebraço */
+  transition: transform 0.3s ease, width 0.3s ease, height 0.3s ease;
+}
+
+.abdomen:hover {
+  transform: scale(1.2);
+  width: 108px; /* Aumenta a largura em 20% */
+  height: 144px; /* Aumenta a altura em 20% */
 }
 
 .biceps {
   position: absolute;
-  top: 580px;
-  left: 470px;
-  width: 25px;
-  height: 50px;
+  top: 538px; /* Ajuste conforme necessário */
+  left: 737px; /* Ajuste conforme necessário */
+  width: 80px;
+  height: 60px;
+  background-image: url('imagens/biceps.png'); /* Adicione a imagem adequada */
+  background-size: cover;
+  z-index: 999;
+  transition: transform 0.3s ease, width 0.3s ease, height 0.3s ease;
 }
 
+.biceps:hover {
+  transform: scale(1.2);
+  width: 96px; /* Aumenta a largura do botão em 20% */
+  height: 72px; /* Aumenta a altura do botão em 20% */
+}
 .quadriceps {
   position: absolute;
-  top: 310px;
-  left: 450px;
+  top: 605px; /* Ajuste conforme necessário */
+  left: 755px; /* Ajuste conforme necessário */
+  width: 130px; /* Ajuste conforme necessário */
+  height: 220px; /* Ajuste conforme necessário */
+  max-height: 240px; /* Defina uma altura máxima para evitar crescimento excessivo */
+  background-image: url('imagens/quadriceps.png');
+  background-size: contain; /* Use 'contain' para manter as proporções da imagem */
+  background-repeat: no-repeat;
+  background-position: center; /* Ajuste para centralizar a imagem */
+  z-index: 999;
+  transition: transform 0.3s ease, width 0.3s ease, height 0.3s ease;
+}
+
+.quadriceps:hover {
+  transform: scale(1.2);
+  width: 120px; /* Aumenta a largura do botão em 20% */
+  max-height: 228px; /* Ajusta a altura máxima proporcionalmente */
+}
+.panturrilha {
+  position: absolute;
+  top: 800px; /* Ajuste conforme necessário */
+  left: 739px; /* Ajuste conforme necessário */
+  width: 120px; /* Ajuste conforme necessário */
+  height: 120px; /* Ajuste conforme necessário */
+  background-image: url('imagens/panturrilha.png'); /* Caminho para a imagem adequada */
+  background-size: cover;
+  z-index: 999;
+  transition: transform 0.3s ease, width 0.3s ease, height 0.3s ease;
+}
+
+.panturrilha:hover {
+  transform: scale(1.2);
+  width: 96px; /* Aumenta a largura da panturrilha em 20% */
+  height: 120px; /* Aumenta a altura da panturrilha em 20% */
+}
+
+.left-shoulder {
+  position: absolute;
+  top: 476px; /* Ajuste conforme necessário */
+  left: 720px; /* Ajuste conforme necessário */
   width: 60px;
-  height: 125px;
+  height: 60px;
+  background-image: url('imagens/ombro_esquerdo.png'); /* Caminho para a imagem adequada */
+  background-size: cover;
+  z-index: 999;
+  transition: transform 0.3s ease, width 0.3s ease, height 0.3s ease;
+}
+
+.left-shoulder:hover {
+  transform: scale(1.2);
+  width: 62px; /* Aumenta a largura do botão em 20% */
+  height: 62px; /* Aumenta a altura do botão em 20% */
+}
+
+.antebraço {
+  position: absolute;
+  top: 587px; /* Ajuste conforme necessário */
+  left: 730px; /* Ajuste conforme necessário */
+  width: 130px; 
+  height: 130px; 
+  background-image: url('imagens/antebraco.png');
+  background-size: contain; /* Definir para 'contain' para evitar cortes */
+  background-repeat: no-repeat; /* Remover repetição da imagem */
+  z-index: 999;
+  transition: transform 0.3s ease, width 0.3s ease, height 0.3s ease;
+}
+
+.antebraço:hover {
+  transform: scale(1.2);
+  width: 126px; /* Aumenta o tamanho em 20% */
+  height: 126px; /* Aumenta o tamanho em 20% */
+}
+.left-biceps {
+  position: absolute;
+  top: 530px; /* Ajuste conforme necessário */
+  left: 870px; /* Ajuste conforme necessário */
+  width: 65px;
+  height: 65px;
+
+  background-image: url('imagens/biceps_Esquerdo.png');
+  background-size: contain; /* Alteração para 'contain' para evitar corte */
+  background-repeat: no-repeat; /* Removido para evitar repetição da imagem */
+  z-index: 999;
+  transition: transform 0.3s ease, width 0.3s ease, height 0.3s ease;
+}
+
+.left-biceps:hover {
+  transform: scale(1.2);
+  width: 96px; /* Aumenta a largura do botão em 20% */
+  height: 72px; /* Aumenta a altura do botão em 20% */
+}
+
+.left-forearm {
+  position: absolute;
+  top: 583px; 
+  left: 882px; 
+  width: 130px; 
+  height: 130px; 
+  background-image: url('imagens/antebraco_Esquerdo.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 999;
+  transition: transform 0.3s ease, width 0.3s ease, height 0.3s ease;
+
+}
+.left-forearm:hover {
+  transform: scale(1.2);
+  width: 126px; /* Aumenta o tamanho em 20% */
+  height: 126px; /* Aumenta o tamanho em 20% */
+}
+.left-shoulder {
+  position: absolute;
+  top: 476px;
+  left: 720px;
+  width: 60px;
+  height: 60px;
+  background-image: url('imagens/ombro_esquerdo.png');
+  background-size: cover;
+  z-index: 999;
+  transition: transform 0.3s ease, width 0.3s ease, height 0.3s ease;
+}
+
+.left-shoulder:hover {
+  transform: scale(1.2);
+  width: 62px;
+  height: 62px;
 }
 
 .trapezius {
   position: absolute;
-  top: 115px;
-  left: 400px;
-  width: 50px;
-  height: 20px;
-}
-
-.upperBack {
-  position: absolute;
-  top: 120px;
-  left: 115px;
-  width: 100px;
-  height: 80px;
-}
-
-.triceps {
-  position: absolute;
-  top: 125px;
-  left: 65px;
-  width: 50px;
-  height: 25px;
-}
-
-.latissimusdorsi {
-  position: absolute;
-  top: 190px;
-  left: 132px;
-  width: 70px;
-  height: 70px;
-}
-
-.glutes {
-  position: absolute;
-  top: 260px;
-  left: 122px;
-  width: 90px;
-  height: 75px;
-}
-
-.hamstrings {
-  position: absolute;
-  top: 330px;
-  left: 170px;
-  width: 45px;
+  top: 450px;
+  left: 780px;
+  width: 80px;
   height: 90px;
+  background-image: url('imagens/trapezio.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 999;
+  transition: transform 0.3s ease; /* Alteração na propriedade transition */
 }
 
-.calf {
-  position: absolute;
-  top: 430px;
-  left: 170px;
-  width: 45px;
-  height: 140px;
+.trapezius:hover {
+  transform: scale(1.2);
 }
 
-.ForearmWorkout {
+.head {
   position: absolute;
-  top: 225px;
-  left: 357px;
-  width: 25px;
+  top: 420px; /* Ajuste conforme necessário */
+  left: 700px; /* Ajuste conforme necessário */
+  width: 100px;
   height: 100px;
+  background-image: url('imagens/cabeca.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 999;
+  transition: transform 0.3s ease; /* Adicionando a transição apenas para a escala */
 }
+
+.head:hover {
+  transform: scale(1.2);
+}
+
+/* Adicionando estilo para a panturrilha esquerda */
+
+.left-calf {
+  position: absolute;
+  top: 800px; /* Ajuste conforme necessário */
+  left: 850px; /* Ajuste conforme necessário */
+  width: 120px; /* Ajuste conforme necessário */
+  height: 120px; /* Ajuste conforme necessário */
+  background-image: url('imagens/panturrilha_esquerda.png'); /* Caminho para a imagem adequada */
+  background-size: contain; /* Ajuste para 'contain' para manter as proporções da imagem */
+  background-repeat: no-repeat; /* Remover repetição da imagem */
+  z-index: 999;
+  transition: transform 0.3s ease, width 0.3s ease, height 0.3s ease;
+}
+
+.left-calf:hover {
+  transform: scale(1.2);
+  width: 96px; /* Aumenta a largura da panturrilha em 20% */
+  height: 120px; /* Aumenta a altura da panturrilha em 20% */
+}
+

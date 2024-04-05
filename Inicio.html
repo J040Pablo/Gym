@@ -4,67 +4,79 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>BeFit</title>
-  <link type ="text/css" rel="stylesheet" href="index.css"/>
+  <link type="text/css" rel="stylesheet" href="index.css"/>
   <link rel="shortcut icon" href="imagens/icone.png" type="image/x-icon">
 </head>
 <body>
   <header>
-    <section id="logo">
+    <div id="logo">
       <a href="Inicio.html">
         <img src="imagens/icone.png" alt="logo" width="100">
       </a>
-    </section>
+    </div>
     <nav>
-      <section id="linksNav">
+      <div id="linksNav">
         <a href="Inicio.html">Home</a>
         <a href="workoutsByMusclegroup.html">Workouts by Muscle Group</a>
         <a href="trainingPrograms.html">Training Programs</a>
         <a href="login.html">Login</a>
-      </section>
+      </div>
     </nav>
   </header>
   <main>
+    <div class="muscles">
+      <img class="shoulder" src="imagens/ombro.png" alt="Ombro">
+    </div>
     <section id="textHome">
       <h2>Welcome to our fitness training website!</h2>
       <p>Aqui, você embarcará em uma jornada em direção a um você mais saudável e mais forte. Nosso mapa corporal interativo permite que você mergulhe profundamente em grupos musculares específicos, fornecendo treinos personalizados para ajudá-lo a alcançar seus objetivos de fitness. Seja você está procurando construir força, aumentar flexibilidade ou melhorar resistência, nós temos o que você precisa.</p>
       <p>Explore nossa interface intuitiva clicando em diferentes grupos musculares para descobrir uma variedade de exercícios projetados para desafiar e transformar seu corpo. Desde rotinas amigáveis para iniciantes até treinos avançados, há algo aqui para todos, independentemente do seu nível de fitness ou experiência.</p>
     </section>
     <section id="corpo">
-      <div class="muscle deltoids"></div>
-      <img src="imagens/imagens/WhatsApp_Image_2024-03-07_at_20.15.26-removebg-preview (1).png" alt="Human Body" width="600">
-      <!-- Original Muscles -->
-      <section class="muscle chest" onclick="location.href='chest.html';"></section>
-      <section class="muscle deltoids" onclick="location.href='deltoids.html';"></section>
-      <section class="muscle abdomen" onclick="location.href='abdomen.html';"></section>
-      <section class="muscle biceps" onclick="location.href='biceps.html';"></section>
-      <section class="muscle quadriceps" onclick="location.href='quadriceps.html';"></section>
-      <section class="muscle trapezius" onclick="location.href='trapezius.html';"></section>
-      <section class="muscle upperBack" onclick="location.href='upperBack.html';"></section>
-      <section class="muscle triceps" onclick="location.href='triceps.html';"></section>
-      <section class="muscle latissimusdorsi" onclick="location.href='latissimusdorsi.html';"></section>
-      <section class="muscle glutes" onclick="location.href='glutes.html';"></section>
-      <section class="muscle hamstrings" onclick="location.href='hamstrings.html';"></section>
-      <section class="muscle calf" onclick="location.href='calf.html';"></section>
-      <section class="muscle ForeamWorkout" onclick="location.href='ForeamWorkout.html';"></section>
-
-      <!-- Duplicated Muscles -->
-      <section class="muscle deltoids2" onclick="location.href='deltoids.html';"></section>
-      <section class="muscle hamstrings2" onclick="location.href='hamstrings.html';"></section>
-      <section class="muscle triceps2" onclick="location.href='triceps.html';"></section>
-      <section class="muscle trapezius2" onclick="location.href='trapezius.html';"></section>
-      <section class="muscle quadriceps2" onclick="location.href='quadriceps.html';"></section>
-      <section class="muscle biceps2" onclick="location.href='biceps.html';"></section>
-      <section class="muscle calf2" onclick="location.href='calf.html';"></section>
-      <section class="muscle calf3" onclick="location.href='calf.html';"></section>
-      <section class="muscle calf4" onclick="location.href='calf.html';"></section>
-      <section class="muscle ForeamWorkout2" onclick="location.href='ForeamWorkout.html';"></section>
-      <section class="muscle ForeamWorkout3" onclick="location.href='ForeamWorkout.html';"></section>
-      <section class="muscle ForeamWorkout4" onclick="location.href='ForeamWorkout.html';"></section>
-      <audio controls autoplay>
-        <source src="Rock.mp3.mp3" type="audio/mpeg">
-      </audio> 
+      <img src="imagens/corpo.png" alt="Human Body" width="600">
     </section>
+    
+    <!--span-->
+    <p>body human: <span class="highlighted-code">MUSCLE MAP</span></p>
+  
+    <!-- Músculos -->
+    <section class="muscle chest"></section>
+    <section class="muscle deltoids"></section>
+    <section class="muscle abdomen"></section>
+    <section class="muscle biceps"></section>
+    <section class="muscle quadriceps"></section>
+    <section class="muscle trapezius"></section>
+    <section class="muscle upperBack"></section>
+    <section class="muscle triceps"></section>
+    <section class="muscle latissimusdorsi"></section>
+    <section class="muscle glutes"></section>
+    <section class="muscle hamstrings"></section>
+    <section class="muscle calf"></section>
+    <section class="muscle ForeamWorkout"></section>
+  
+    <!-- Músculos duplicados -->
+    <section class="muscle deltoids2"></section>
+    <section class="muscle hamstrings2"></section>
+    <section class="muscle triceps2"></section>
+    <section class="muscle trapezius2"></section>
+    <section class="muscle quadriceps2"></section>
+    <section class="muscle biceps2"></section>
+    <section class="muscle calf2"></section>
+    <section class="muscle calf3"></section>
+    <section class="muscle calf4"></section>
+    <section class="muscle panturrilha"></section>
+    <section class="muscle left-shoulder"></section>
+    <section class="muscle antebraço"></section>
+    <section class="muscle left-biceps"></section>
+    <section class="muscle left-forearm"></section>
+    <section class="muscle trapezius"></section>
+    <section class="muscle left-calf"></section>
+    
+    </main>
+    
+  
   </main>
+  
   <footer>
     <p>© 2024 BeFit. All rights reserved.</p>
   </footer>
