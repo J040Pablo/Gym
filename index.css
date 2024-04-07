@@ -352,3 +352,157 @@ main {
   height: 120px; /* Aumenta a altura da panturrilha em 20% */
 }
 
+.upperBack {
+  position: absolute;
+  top: 477px; /* Ajuste conforme necessário */
+  left: 396px; /* Ajuste conforme necessário */
+  width: 140px;
+  height: 108px;
+  background-image: url('imagens/upperBack.png'); /* Caminho para a imagem adequada */
+  background-size: contain; /* Ajuste para 'contain' para manter as proporções da imagem */
+  background-repeat: no-repeat; /* Remover repetição da imagem */
+  z-index: 999;
+  transition: transform 0.3s ease; /* Adicionando transição para a escala */
+}
+
+.upperBack:hover {
+  transform: scale(1.2); /* Aumenta em 20% quando o mouse está sobre */
+}
+
+.triceps {
+  position: absolute;
+  top: 490px; /* Ajuste conforme necessário */
+  left: 355px; /* Ajuste conforme necessário */
+  width: 62px;
+  height: 60px;
+  background-image: url('imagens/triceps.png'); /* Caminho para a imagem adequada */
+  background-size: contain; /* Ajuste para 'contain' para manter as proporções da imagem */
+  background-repeat: no-repeat; /* Remover repetição da imagem */
+  z-index: 999;
+  transition: transform 0.3s ease; /* Adicionando transição para a escala */
+}
+
+.triceps:hover {
+  transform: scale(1.2); /* Aumenta em 20% quando o mouse está sobre */
+}
+
+.latissimusdorsi {
+  position: absolute;
+  top: 518px; /* Ajuste conforme necessário */
+  left: 406px; /* Ajuste conforme necessário */
+  width: 120px;
+  height: 130px;
+  background-image: url('imagens/latissimusdorsi.png'); /* Caminho para a imagem adequada */
+  background-size: contain; /* Ajuste para 'contain' para manter as proporções da imagem */
+  background-repeat: no-repeat; /* Remover repetição da imagem */
+  z-index: 999;
+  transition: transform 0.3s ease; /* Adicionando transição para a escala */
+}
+
+.latissimusdorsi:hover {
+  transform: scale(1.2); /* Aumenta em 20% quando o mouse está sobre */
+}
+
+.glutes {
+  position: absolute;
+  top: 628px; /* Ajuste conforme necessário */
+  left: 420px; /* Ajuste conforme necessário */
+  width: 120px;
+  height: 70px;
+  background-image: url('imagens/glutes.png'); /* Caminho para a imagem adequada */
+  background-size: contain; /* Ajuste para 'contain' para manter as proporções da imagem */
+  background-repeat: no-repeat; /* Remover repetição da imagem */
+  z-index: 999;
+  transition: transform 0.3s ease; /* Adicionando transição para a escala */
+}
+
+.glutes:hover {
+  transform: scale(1.2); /* Aumenta em 20% quando o mouse está sobre */
+}
+.hamstrings {
+  position: absolute;
+  top: 690px; /* Ajuste conforme necessário */
+  left: 415px; /* Ajuste conforme necessário */
+  width: 100px;
+  height: 120px;
+  background-image: url('imagens/posterior.png'); /* Caminho para a imagem adequada */
+  background-size: contain; /* Ajuste para 'contain' para manter as proporções da imagem */
+  background-repeat: no-repeat; /* Remover repetição da imagem */
+  z-index: 999;
+  transition: transform 0.3s ease; /* Adicionando transição para a escala */
+}
+
+.hamstrings:hover {
+  transform: scale(1.2); /* Aumenta em 20% quando o mouse está sobre */
+}
+
+/* Estilos para o músculo tríceps esquerdo */
+.tricepsesq {
+  position: absolute;
+  top: 490px; /* Ajuste conforme necessário */
+  left: 515px; /* Ajuste conforme necessário */
+  width: 62px;
+  height: 60px;
+  background-image: url('imagens/tricepsesq.png'); /* Caminho para a imagem adequada */
+  background-size: contain; /* Ajuste para 'contain' para manter as proporções da imagem */
+  background-repeat: no-repeat; /* Remover repetição da imagem */
+  z-index: 999;
+  transition: transform 0.3s ease; /* Adicionando transição para a escala */
+}
+.tricepsesq:hover {
+  transform: scale(1.2); /* Aumenta em 20% quando o mouse está sobre */
+}
+
+/* Estilos para a panturrilha esquerda */
+.panturrilha_Esquerda {
+  position: absolute;
+  top: 800px; /* Ajuste conforme necessário */
+  left: 415px; /* Ajuste conforme necessário */
+  width: 120px; /* Ajuste conforme necessário */
+  height: 140px; /* Ajuste conforme necessário */
+  background-image: url('imagens/calf2.png'); /* Caminho para a imagem adequada */
+  background-size: contain; /* Ajuste para 'contain' para manter as proporções da imagem */
+  background-repeat: no-repeat; /* Remover repetição da imagem */
+  z-index: 999;
+  transition: transform 0.3s ease; /* Adicionando transição para a escala */
+}
+
+.panturrilha_Esquerda:hover {
+  transform: scale(1.2); /* Aumenta em 20% quando o mouse está sobre */
+}
+
+/* Estilos para o segundo antebraço */
+.ForeamWorkout2 {
+  position: absolute;
+  top: 418px; /* Ajuste conforme necessário */
+  left: 340px; /* Ajuste conforme necessário */
+  width: 90px; 
+  height: 70px; 
+  background-image: url('imagens/ForeamWorkout2.png'); /* Caminho para a imagem adequada */
+  background-size: contain; /* Ajuste para 'contain' para manter as proporções da imagem */
+  background-repeat: no-repeat; /* Remover repetição da imagem */
+  z-index: 999;
+  transition: transform 0.3s ease, width 0.3s ease, height 0.3s ease;
+}
+
+.ForeamWorkout2:hover {
+  transform: scale(1.2); /* Aumenta em 20% quando o mouse está sobre */
+}
+
+/* Estilos para o segundo antebraço esquerdo */
+.ForeamWorkoutesq2 {
+  position: absolute;
+  top: 418px; /* Ajuste conforme necessário */
+  left: 510px; /* Ajuste conforme necessário */
+  width: 90px; 
+  height: 70px; 
+  background-image: url('imagens/ForeamWorkoutesq2.png'); /* Caminho para a imagem adequada */
+  background-size: contain; /* Ajuste para 'contain' para manter as proporções da imagem */
+  background-repeat: no-repeat; /* Remover repetição da imagem */
+  z-index: 999;
+  transition: transform 0.3s ease, width 0.3s ease, height 0.3s ease;
+}
+
+.ForeamWorkoutesq2:hover {
+  transform: scale(1.2); /* Aumenta em 20% quando o mouse está sobre */
+}

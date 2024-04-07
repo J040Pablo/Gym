@@ -113,6 +113,18 @@ function redirectToTrapeziusSite() {
     window.location.href = "trapezius.html";
 }
 
+// Função para redirecionar para a página ForeamWorkout.html
+function redirectToForearmWorkoutPage() {
+    window.location.assign("file:///C:/Users/jo%C3%A3o%20pablo/OneDrive/Documentos/GitHub/Gym/ForeamWorkout.html");
+}
+function redirectToForearmWorkout2Site() {
+    window.location.href = "ForeamWorkout.html";
+}
+function redirectToPanturrilhaEsquerdaSite() {
+    window.location.href = "calf.html";
+}
+
+
 // Seleciona os botões dos músculos
 var chestButton = document.querySelector(".muscle.chest");
 var deltoidsButtons = document.querySelectorAll(".muscle.right-shoulder, .muscle.left-shoulder");
@@ -131,6 +143,9 @@ var panturrilhaButton = document.querySelector(".muscle.panturrilha");
 var antebraçoButton = document.querySelector(".muscle.antebraco");
 var leftBicepsButton = document.querySelector(".muscle.leftBiceps");
 var leftForearmButton = document.querySelector(".muscle.left-forearm");
+var ForeamWorkout2Button = document.querySelector(".muscle.ForeamWorkout2");
+var forearmWorkoutesq2Button = document.querySelector(".muscle.ForeamWorkoutesq2");
+var panturrilhaEsquerdaButton = document.getElementById("panturrilhaEsquerda");
 
 // Adiciona ouvintes de evento de clique para cada botão de músculo
 chestButton.addEventListener("click", redirectToChestSite);
@@ -147,8 +162,6 @@ latissimusDorsiButton.addEventListener("click", redirectToLatissimusDorsiSite);
 glutesButton.addEventListener("click", redirectToGlutesSite);
 hamstringsButton.addEventListener("click", redirectToHamstringsSite);
 calfButton.addEventListener("click", redirectToCalfSite);
-foreamWorkoutButton.addEventListener("click", redirectToForearmWorkoutSite);
-panturrilhaButton.addEventListener("click", redirectToPanturrilhaSite);
-antebracoButton.addEventListener("click", redirectToAntebraçoSite);
-leftBicepsButton.addEventListener("click", redirectToLeftBicepsSite);
-leftForearmButton.addEventListener("click", redirectToLeftForearmSite);
+ForeamWorkout2Button.addEventListener("click", redirectToForearmWorkout2Site);
+forearmWorkoutesq2Button.addEventListener("click", redirectToForearmWorkoutPage);
+panturrilhaEsquerdaButton.addEventListener("click", redirectToPanturrilhaEsquerdaSite);
