@@ -97,6 +97,31 @@ main {
 
 /* musculos */
 
+.cabeca {
+  position: absolute;
+  top: 400px; /* Ajuste conforme necessário */
+  left: 770px; /* Ajuste conforme necessário */
+  width: 100px;
+  height: 100px;
+  background-image: url('imagens/cabeca.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 999;
+}
+.cabecaAtras {
+  position: absolute;
+  top: 406px; /* Ajuste conforme necessário */
+  left: 430px; /* Ajuste conforme necessário */
+  width: 70px;
+  height: 70px;
+  background-image: url('imagens/cabecaAtras.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 999;
+  transition: transform 0.3s ease; /* Adicionando a transição apenas para a escala */
+}
 .right-shoulder {
   position: absolute;
   top: 476px; /* Ajuste conforme necessário */
@@ -153,7 +178,7 @@ main {
   position: absolute;
   top: 538px; /* Ajuste conforme necessário */
   left: 737px; /* Ajuste conforme necessário */
-  width: 80px;
+  width: 30px;
   height: 60px;
   background-image: url('imagens/biceps.png'); /* Adicione a imagem adequada */
   background-size: cover;
@@ -168,10 +193,10 @@ main {
 }
 .quadriceps {
   position: absolute;
-  top: 605px; /* Ajuste conforme necessário */
-  left: 755px; /* Ajuste conforme necessário */
-  width: 130px; /* Ajuste conforme necessário */
-  height: 220px; /* Ajuste conforme necessário */
+  top: 640px; /* Ajuste conforme necessário */
+  left: 705px; /* Ajuste conforme necessário */
+  width: 160px; /* Ajuste conforme necessário */
+  height: 160px; /* Ajuste conforme necessário */
   max-height: 240px; /* Defina uma altura máxima para evitar crescimento excessivo */
   background-image: url('imagens/quadriceps.png');
   background-size: contain; /* Use 'contain' para manter as proporções da imagem */
@@ -186,6 +211,28 @@ main {
   width: 120px; /* Aumenta a largura do botão em 20% */
   max-height: 228px; /* Ajusta a altura máxima proporcionalmente */
 }
+
+.quadricepsEsq {
+  position: absolute;
+  top: 640px; /* Ajuste conforme necessário */
+  left: 825px; /* Ajuste conforme necessário */
+  width: 160px; /* Ajuste conforme necessário */
+  height: 160px; /* Ajuste conforme necessário */
+  background-image: url('imagens/quadricepsEsq.png');
+  background-repeat: no-repeat;
+  background-size: contain; /* Alteração aqui */
+  z-index: 999;
+  transition: transform 0.3s ease, width 0.3s ease, height 0.3s ease;
+}
+
+.quadricepsEsq:hover {
+  transform: scale(1.2);
+  width: 144px; /* Aumenta a largura do botão em 20% */
+  height: 144px; /* Ajusta a altura proporcionalmente */
+  max-height: 228px; /* Ajusta a altura máxima proporcionalmente */
+}
+
+
 .panturrilha {
   position: absolute;
   top: 800px; /* Ajuste conforme necessário */
@@ -226,7 +273,7 @@ main {
   position: absolute;
   top: 587px; /* Ajuste conforme necessário */
   left: 730px; /* Ajuste conforme necessário */
-  width: 130px; 
+  width: 35px; 
   height: 130px; 
   background-image: url('imagens/antebraco.png');
   background-size: contain; /* Definir para 'contain' para evitar cortes */
@@ -240,6 +287,7 @@ main {
   width: 126px; /* Aumenta o tamanho em 20% */
   height: 126px; /* Aumenta o tamanho em 20% */
 }
+
 .left-biceps {
   position: absolute;
   top: 538px; /* Ajuste conforme necessário */
@@ -277,24 +325,8 @@ main {
   width: 126px; /* Aumenta o tamanho em 20% */
   height: 126px; /* Aumenta o tamanho em 20% */
 }
-.left-shoulder {
-  position: absolute;
-  top: 476px;
-  left: 720px;
-  width: 60px;
-  height: 60px;
-  background-image: url('imagens/ombro_esquerdo.png');
-  background-size: cover;
-  z-index: 999;
-  transition: transform 0.3s ease, width 0.3s ease, height 0.3s ease; /* Adicionei a transição aqui */
-}
 
-.left-shoulder:hover {
-  transform: scale(1.2);
-  width: 62px;
-  height: 62px;
-}
-
+/* Estilo para o contêiner do trapézio */
 .trapezius {
   position: absolute;
   top: 450px;
@@ -305,31 +337,16 @@ main {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  z-index: 999;
-  transition: transform 0.3s ease; /* Alteração na propriedade transition */
+  z-index: 9999;
+  cursor: pointer; /* Altera o cursor para uma mão ao passar por cima, indicando que é clicável */
+  transition: transform 0.3s ease; /* Transição suave ao escalar */
 }
 
+/* Efeito de escala quando passa o mouse sobre o trapézio */
 .trapezius:hover {
   transform: scale(1.2);
 }
 
-.head {
-  position: absolute;
-  top: 420px; /* Ajuste conforme necessário */
-  left: 700px; /* Ajuste conforme necessário */
-  width: 100px;
-  height: 100px;
-  background-image: url('imagens/cabeca.png');
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  z-index: 999;
-  transition: transform 0.3s ease; /* Adicionando a transição apenas para a escala */
-}
-
-.head:hover {
-  transform: scale(1.2);
-}
 
 /* Adicionando estilo para a panturrilha esquerda */
 
@@ -505,4 +522,30 @@ main {
 
 .ForeamWorkoutesq2:hover {
   transform: scale(1.2); /* Aumenta em 20% quando o mouse está sobre */
+}
+
+.pe {
+  position: absolute;
+  top: 930px; /* Ajuste conforme necessário */
+  left: 718px; /* Ajuste conforme necessário */
+  width: 200px; 
+  height: 100px; 
+  background-image: url('imagens/pe.png'); /* Caminho para a imagem adequada */
+  background-size: contain; /* Ajuste para 'contain' para manter as proporções da imagem */
+  background-repeat: no-repeat; /* Remover repetição da imagem */
+  z-index: 999;
+  transition: transform 0.3s ease, width 0.3s ease, height 0.3s ease;
+}
+
+.peAtras {
+  position: absolute;
+  top: 940px; /* Ajuste conforme necessário */
+  left: 403px; /* Ajuste conforme necessário */
+  width: 120px; 
+  height: 100px; 
+  background-image: url('imagens/peAtras.png'); /* Caminho para a imagem adequada */
+  background-size: contain; /* Ajuste para 'contain' para manter as proporções da imagem */
+  background-repeat: no-repeat; /* Remover repetição da imagem */
+  z-index: 999;
+  transition: transform 0.3s ease, width 0.3s ease, height 0.3s ease;
 }
