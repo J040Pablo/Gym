@@ -16,7 +16,7 @@ function redirectToAbdomenSite() {
 
 // Função para redirecionar para a página do bíceps esquerdo
 function redirectToLeftBicepsPage() {
-    window.location.href = "leftBiceps.html";
+    window.location.href = "biceps.html";
 }
 
 // Função para redirecionar para o site do bíceps
@@ -31,7 +31,7 @@ function redirectToQuadricepsSite() {
 
 // Função para redirecionar para o site do quadriceps esquerdo
 function redirectToQuadricepsEsqSite() {
-    window.location.href = "leftQuadriceps.html";
+    window.location.href = "quadriceps.html";
 }
 
 // Função para redirecionar para o site do trapézio
@@ -104,6 +104,11 @@ function redirectToTricepsEsqSite() {
     window.location.href = "triceps.html";
 }
 
+// Função para redirecionar para o site da panturrilha esquerda
+function leftCalfRedirect() {
+    window.location.href = "calf.html";
+}
+
 // Seleciona os botões dos músculos
 var chestButton = document.querySelector(".muscle.chest");
 var deltoidsButtons = document.querySelectorAll(".muscle.right-shoulder, .muscle.left-shoulder");
@@ -119,13 +124,22 @@ var glutesButton = document.querySelector(".muscle.glutes");
 var hamstringsButton = document.querySelector(".muscle.hamstrings");
 var calfButton = document.querySelector(".muscle.calf");
 var panturrilhaButton = document.querySelector(".muscle.panturrilha");
-var panturrilhaEsquerdaButton = document.getElementById("panturrilhaEsquerda");
+if (panturrilhaButton) {
+    panturrilhaButton.addEventListener("click", redirectToPanturrilhaSite);
+}
+var panturrilhaEsquerdaButton = document.querySelector(".panturrilha_Esquerda");
+if (panturrilhaEsquerdaButton) {
+    panturrilhaEsquerdaButton.addEventListener("click", redirectToPanturrilhaEsquerdaSite);
+} else {
+    console.error("Elemento .panturrilha_Esquerda não encontrado no DOM.");
+}
 var leftForearmButton = document.querySelector(".muscle.left-forearm"); // Corrigido
 var ForearmWorkoutButton = document.querySelector(".muscle.ForeamWorkout");
 var ForearmWorkout2Button = document.querySelector(".muscle.ForeamWorkout2");
 var ForearmWorkoutesq2Button = document.querySelector(".muscle.ForeamWorkoutesq2");
 var leftBicepsButton = document.querySelector(".muscle.left-biceps");
 var tricepsEsqButton = document.querySelector(".muscle.tricepsesq");
+var leftCalfButton = document.querySelector(".left-calf");
 
 // Adiciona ouvintes de evento de clique para cada botão de músculo
 chestButton.addEventListener("click", redirectToChestSite);
@@ -151,3 +165,4 @@ calfButton.addEventListener("click", redirectToCalfSite);
 panturrilhaButton.addEventListener("click", redirectToPanturrilhaSite);
 leftBicepsButton.addEventListener("click", redirectToLeftBicepsPage);
 tricepsEsqButton.addEventListener("click", redirectToTricepsEsqSite);
+leftCalfButton.addEventListener("click", leftCalfRedirect);
