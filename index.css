@@ -69,9 +69,6 @@ main {
     margin-right: 15px;
   }
 
-  .muscles {
-    display: none;
-  }
 }
 
 /* Media query para dispositivos menores que 480px */
@@ -93,6 +90,28 @@ main {
 .highlighted-code {
   color: blue;
   font-weight: bold; 
+}
+.video {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.video p {
+  text-align: center;
+}
+
+.video iframe {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+/* Media query para dispositivos menores */
+@media screen and (max-width: 768px) {
+  .video {
+    padding: 10px;
+  }
 }
 
 /* musculos */
