@@ -1,3 +1,18 @@
+//leva para o perfil; ao fazer o login
+
+document.getElementById('loginForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    const email = document.getElementById('floatingInput').value;
+    const password = document.getElementById('floatingPassword').value;
+
+    if (email && password) {
+      window.location.href = 'perfil.html';
+    } else {
+      alert('Email ou senha inválidos');
+    }
+  });
+  
+//botões para acessar a pagina para cada musculo
 
 // Função para redirecionar para o site do peito
 function redirectToChestSite() {

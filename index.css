@@ -569,7 +569,87 @@ main {
   transition: transform 0.3s ease, width 0.3s ease, height 0.3s ease;
 }
 
+/*tela de login*/
+
 .form-container{
   max-width: 350px;
   padding: 1rem;
+}
+
+/*perfil*/
+
+.profile-banner {
+  position: relative;
+  height: 300px; /* Altura do banner */
+  overflow: hidden; /* Oculta o overflow do conteúdo fora do banner */
+}
+
+.profile-banner {
+  position: relative;
+  height: 300px; /* Altura do banner */
+  overflow: hidden; /* Oculta o overflow do conteúdo fora do banner */
+  top: 40px; /* Move o banner para cima */
+}
+
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Cor e opacidade do overlay */
+}
+
+.profile-info {
+  position: absolute;
+  bottom: 20px; /* Ajuste a posição vertical conforme necessário */
+  left: 50px; /* Ajuste a posição horizontal conforme necessário */
+  color: #fff; /* Cor do texto para contrastar com o banner */
+  z-index: 1; /* Coloca a seção de perfil sobreposta ao banner */
+  padding: 10px; /* Adiciona algum espaçamento interno para o conteúdo do perfil */
+}
+
+.profile-info h1 {
+  position: absolute;
+  top: -150px; /* Ajuste a distância do topo conforme necessário */
+  left: 275px; /* Ajuste a distância da esquerda conforme necessário */
+  font-size: 24px; /* Ajusta o tamanho da fonte do nome do usuário */
+}
+
+.profile-info p {
+  margin: 5px 0; /* Adiciona algum espaçamento entre as linhas */
+}
+
+.profile-picture {
+  width: 200px; /* Largura da imagem de perfil */
+  height: 200px; /* Altura da imagem de perfil */
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #fff;
+  position: absolute;
+  bottom: 20px; /* Ajuste a posição vertical conforme necessário */
+  left: 50px; /* Ajuste a posição horizontal conforme necessário */
+}
+
+
+.post {
+  margin-top: 20px;
+  border: 1px solid #ccc;
+  padding: 20px;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+textarea {
+  width: 100%;
+  margin-top: 10px;
 }
