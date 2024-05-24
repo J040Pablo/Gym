@@ -568,3 +568,8 @@ main {
   z-index: 999;
   transition: transform 0.3s ease, width 0.3s ease, height 0.3s ease;
 }
+
+.form-container{
+  max-width: 350px;
+  padding: 1rem;
+}
