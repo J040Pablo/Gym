@@ -569,101 +569,227 @@ main {
   transition: transform 0.3s ease, width 0.3s ease, height 0.3s ease;
 }
 
-/*tela de login*/
+/* Tela De Perfil */
 
-.form-container{
+/* Banner */
+.profile-banner {
+  position: relative;
+  height: 300px; /* Altura do banner */
+  overflow: hidden; /* Limita o tamanho do banner */
+}
+
+.profile-banner img {
+  width: 100%;
+  height: auto;
+}
+header nav a:hover {
+  text-decoration: underline;
+}
+
+/* Tela de login */
+.form-container {
   max-width: 350px;
   padding: 1rem;
 }
 
-/*perfil*/
-
-.profile-banner {
-  position: relative;
-  height: 300px; /* Altura do banner */
-  overflow: hidden; /* Oculta o overflow do conteúdo fora do banner */
+/* Perfil */
+#profileContent {
+  padding: 20px;
+  margin-top: 150px;
+  text-align: center;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
 }
 
-.profile-banner {
-  position: relative;
-  height: 300px; /* Altura do banner */
-  overflow: hidden; /* Oculta o overflow do conteúdo fora do banner */
-  top: 40px; /* Move o banner para cima */
-}
-
-
-.overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Cor e opacidade do overlay */
-}
-
-.profile-info {
-  position: absolute;
-  bottom: 20px; /* Ajuste a posição vertical conforme necessário */
-  left: 50px; /* Ajuste a posição horizontal conforme necessário */
-  color: #fff; /* Cor do texto para contrastar com o banner */
-  z-index: 1; /* Coloca a seção de perfil sobreposta ao banner */
-  padding: 10px; /* Adiciona algum espaçamento interno para o conteúdo do perfil */
-}
-
-.profile-info h1 {
-  position: absolute;
-  top: -150px; /* Ajuste a distância do topo conforme necessário */
-  left: 275px; /* Ajuste a distância da esquerda conforme necessário */
-  font-size: 24px; /* Ajusta o tamanho da fonte do nome do usuário */
-}
-
-.profile-info p {
-  margin: 5px 0; /* Adiciona algum espaçamento entre as linhas */
-}
-
+/* Foto de perfil */
 .profile-picture {
-  width: 200px; /* Largura da imagem de perfil */
-  height: 200px; /* Altura da imagem de perfil */
+  position: absolute;
+  bottom: 10px; /*posição vertical*/
+  left: 20px; /*posição horizontal*/
+  text-align: center;
+  display: flex;
+}
+
+.profile-picture img {
+  width: 100px; /* Largura da imagem de perfil */
+  height: 100px; /* Altura da imagem de perfil */
   border-radius: 50%;
   object-fit: cover;
   border: 3px solid #fff;
-  position: absolute;
-  bottom: 20px; /* Ajuste a posição vertical conforme necessário */
-  left: 50px; /* Ajuste a posição horizontal conforme necessário */
 }
 
 
-.post {
+.user-info {
+  display: flex;
+  align-items: center;
+  color: white;
+  margin-bottom: 10px; /* Espaço entre a foto de perfil e o botão */
+}
+
+#change-picture-btn {
+  margin-top: 10px;
+  align-self: flex-end;
+}
+
+#username-display {
+  margin-left: 10px;
+}
+
+#change-picture-btn {
+  margin-top: 10px;
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px; /* Espaço entre o nome de usuário e o botão */
+  align-self: flex-end; /* Alinha o botão à direita dentro do contêiner pai */
+}
+
+#change-picture-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Crie o Seu Treino */
+
+.create-workout {
+  background-color: white;
   margin-top: 20px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.create-workout-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.create-workout-header h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+#createExerciseBox {
+  background-color: #f9f9f9;
   border: 1px solid #ccc;
-  padding: 20px;
+  padding: 10px;
+  margin-top: 10px;
+  display: none; /* Inicialmente oculto */
 }
 
-body {
-  font-family: Arial, sans-serif;
+#createExerciseBox label {
+  display: block;
+  margin-bottom: 5px;
 }
 
-.container {
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 20px;
+#createExerciseBox input {
+  width: calc(100% - 12px);
+  padding: 5px;
+  margin-bottom: 10px;
 }
 
-textarea {
-  width: 100%;
+#createExerciseBox button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#createExerciseBox button:hover {
+  background-color: #0056b3;
+}
+
+.exercise-list {
   margin-top: 10px;
 }
 
-/* Estilos para a página de perfil */
-#perfilContent {
-  padding: 20px;
-  margin-top: 150px;
+.exercise-item {
+  background-color: #f9f9f9;
+  padding: 10px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-#perfilContent h2 {
-  font-size: 24px;
+.exercise-item .exercise-name {
+  flex: 1;
 }
 
-#perfilContent p {
-  font-size: 18px;
+.exercise-item button {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 4px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.exercise-item button:hover {
+  background-color: #c82333;
+}
+
+/* Estilos para o botão "+ Novo Treino" */
+.add-new-workout-btn {
+  margin-top: 10px;
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.add-new-workout-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Estilos para o botão "Remover Série" e "Remover Treino" */
+.remove-exercise-btn, .remove-workout-btn {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 4px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.remove-exercise-btn:hover, .remove-workout-btn:hover {
+  background-color: #c82333;
+}
+
+/* Estilos para o botão "+" */
+.add-new-workout-btn {
+  margin-top: 10px;
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.add-new-workout-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Estilizando o botão "Adicionar Exercício" */
+.add-exercise-form button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.add-exercise-form button:hover {
+  background-color: #0056b3;
 }
