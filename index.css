@@ -797,6 +797,17 @@ header nav a:hover {
 }
 
 /* Estilizando o botão "Adicionar Exercício" */
+.add-exercise-form {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Ajuste o espaçamento conforme necessário */
+}
+
+#filterContainer {
+  display: flex;
+  align-items: center;
+}
+
 .add-exercise-form button {
   background-color: #007bff;
   color: white;
@@ -808,4 +819,20 @@ header nav a:hover {
 
 .add-exercise-form button:hover {
   background-color: #0056b3;
+}
+
+/*Botão Filtrar*/
+.filter-button {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 12px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #f0f0f0;
+  cursor: pointer;
+}
+
+.filter-button svg {
+  margin-right: 8px;
 }
