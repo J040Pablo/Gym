@@ -1,50 +1,60 @@
-// Funções de redirecionamento para as páginas específicas de cada músculo
-function redirectToChestSite() { window.location.href = "chest.html"; }
-function redirectToDeltoidsSite() { window.location.href = "deltoids.html"; }
-function redirectToAbdomenSite() { window.location.href = "abdomen.html"; }
-function redirectToBicepsSite() { window.location.href = "biceps.html"; }
-function redirectToQuadricepsSite() { window.location.href = "quadriceps.html"; }
-function redirectToQuadricepsEsqSite() { window.location.href = "quadriceps.html"; }
-function redirectToTrapeziusSite() { window.location.href = "trapezius.html"; }
-function redirectToUpperBackSite() { window.location.href = "upperBack.html"; }
-function redirectToTricepsSite() { window.location.href = "triceps.html"; }
-function redirectToLatissimusDorsiSite() { window.location.href = "latissimusdorsi.html"; }
-function redirectToGlutesSite() { window.location.href = "glutes.html"; }
-function redirectToHamstringsSite() { window.location.href = "hamstrings.html"; }
-function redirectToCalfSite() { window.location.href = "calf.html"; }
-function redirectToPanturrilhaSite() { window.location.href = "calf.html"; }
-function redirectToPanturrilhaEsquerdaSite() { window.location.href = "calf.html"; }
-function redirectToLeftForearmSite() { window.location.href = "ForearmWorkout.html"; }
-function redirectToForearmWorkoutPage() { window.location.href = "ForearmWorkout.html"; }
-function redirectToForearmWorkout2Page() { window.location.href = "ForearmWorkout2.html"; }
-function redirectToForearmWorkoutesq2Page() { window.location.href = "ForearmWorkoutesq2.html"; }
-function redirectToTricepsEsqSite() { window.location.href = "triceps.html"; }
-function leftCalfRedirect() { window.location.href = "calf.html"; }
-function redirectToPage(page) { window.location.href = `${page}.html`; }
-
 document.addEventListener('DOMContentLoaded', () => {
-  const loginForm = document.getElementById('loginForm');
-  const registerForm = document.getElementById('registerForm');
-  const profilePage = window.location.pathname.includes('profile.html');
+  // Funções de redirecionamento para as páginas específicas de cada músculo
+  function redirectToPage(page) {
+    if (['left-forearm', 'ForeamWorkout', 'ForeamWorkout2', 'ForeamWorkoutesq2'].includes(page)) {
+      window.location.href = 'file:///C:/Users/jo%C3%A3o%20pablo/OneDrive/Documentos/GitHub/Gym/ForeamWorkout.html';
+    } else {
+      window.location.href = `${page}.html`;
+    }
+  }
 
+  // Adiciona event listeners para cada seção de músculo
+  const muscleRedirects = {
+    'chest': 'chest',
+    'deltoids2': 'deltoids',
+    'abdomen': 'abdomen',
+    'biceps': 'biceps',
+    'quadriceps': 'quadriceps',
+    'quadricepsEsq': 'quadriceps',
+    'trapezius': 'trapezius',
+    'upperBack': 'upperBack',
+    'triceps': 'triceps',
+    'latissimusdorsi': 'latissimusdorsi',
+    'glutes': 'glutes',
+    'hamstrings': 'hamstrings',
+    'calf': 'calf',
+    'panturrilha': 'calf',
+    'panturrilha_Esquerda': 'calf',
+    'left-forearm': 'ForeamWorkout',
+    'ForeamWorkout': 'ForeamWorkout',
+    'ForeamWorkout2': 'ForeamWorkout',
+    'ForeamWorkoutesq2': 'ForeamWorkout',
+    'tricepsesq': 'triceps',
+    'left-calf': 'calf'
+  };
+
+  Object.keys(muscleRedirects).forEach(id => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.addEventListener('click', () => redirectToPage(muscleRedirects[id]));
+    }
+  });
+
+  // Login functionality
+  const loginForm = document.getElementById('loginForm');
   if (loginForm) {
     loginForm.addEventListener('submit', (e) => {
       e.preventDefault();
-
       const email = document.getElementById('email').value;
       const password = document.getElementById('password').value;
 
-      // Simulação de recuperação de usuários do localStorage
       const users = JSON.parse(localStorage.getItem('users')) || [];
       const currentUser = users.find(user => user.email === email && user.password === password);
 
       if (currentUser) {
-        // Se o login for bem-sucedido, salva o usuário atual no localStorage
         localStorage.setItem('currentUser', JSON.stringify(currentUser));
-        // Redireciona para a página de perfil
         window.location.href = 'profile.html';
       } else {
-        // Se as credenciais estiverem incorretas, exibe uma mensagem de erro (pode ser ajustado conforme necessário)
         alert('Login failed. Please check your credentials.');
       }
     });
@@ -52,6 +62,8 @@ document.addEventListener('DOMContentLoaded', () => {
     console.error('Login form not found.');
   }
 
+  // Register functionality
+  const registerForm = document.getElementById('registerForm');
   if (registerForm) {
     registerForm.addEventListener('submit', (e) => {
       e.preventDefault();
@@ -78,6 +90,8 @@ document.addEventListener('DOMContentLoaded', () => {
     console.error('Register form not found.');
   }
 
+  // Profile page functionality
+  const profilePage = window.location.pathname.includes('profile.html');
   if (profilePage) {
     const loginLink = document.getElementById('loginLink');
     const profileLink = document.getElementById('profileLink');
@@ -85,31 +99,27 @@ document.addEventListener('DOMContentLoaded', () => {
     const emailSpan = document.getElementById('email');
     const logoutButton = document.getElementById('logoutButton');
 
-    // Verifica se há um usuário logado no localStorage
     const currentUser = JSON.parse(localStorage.getItem('currentUser'));
 
     if (currentUser) {
-      // Se houver um usuário logado, mostra o nome de usuário e email
       usernameSpan.textContent = currentUser.name;
       emailSpan.textContent = currentUser.email;
-      loginLink.style.display = 'none'; // Esconde o link de login
-      profileLink.style.display = 'inline'; // Mostra o link de perfil
+      loginLink.style.display = 'none';
+      profileLink.style.display = 'inline';
     } else {
-      // Se não houver usuário logado, redireciona para a página de login apenas se não estiver nela
       if (!window.location.href.includes('login.html')) {
         window.location.href = 'login.html';
       }
       return;
     }
 
-    // Adiciona evento de logout ao botão
     logoutButton.addEventListener('click', () => {
-      localStorage.removeItem('currentUser'); // Remove o usuário logado do localStorage
-      window.location.href = 'login.html'; // Redireciona para a página de login
+      localStorage.removeItem('currentUser');
+      window.location.href = 'login.html';
     });
   }
 
-  // Verifica se o usuário está logado para mostrar o perfil e ocultar o link de login
+  // Verify if the user is logged in to show the profile and hide the login link
   const currentUser = JSON.parse(localStorage.getItem('currentUser'));
   if (currentUser) {
     const profileLink = document.getElementById('profileLink');
@@ -118,14 +128,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const emailSpan = document.getElementById('email');
     profileLink.style.display = 'inline-block';
     loginLink.style.display = 'none';
-    usernameDisplay.textContent = currentUser.name; // Atualiza o nome de usuário no perfil
+    usernameDisplay.textContent = currentUser.name;
     emailSpan.textContent = currentUser.email;
   }
 
-  // Função para adicionar um novo treino com nome personalizado
+  // Function to add a new workout with a custom name
   function addWorkout() {
     const workoutName = prompt('Digite o nome do novo treino:');
-    if (!workoutName) return; // Se o usuário cancelar ou não inserir um nome, não faz nada
+    if (!workoutName) return;
 
     const workoutDiv = document.createElement('div');
     workoutDiv.classList.add('workout');
@@ -135,9 +145,7 @@ document.addEventListener('DOMContentLoaded', () => {
         <h3>${workoutName}</h3>
         <button class="remove-workout-btn">Remover Treino</button>
       </div>
-      <div class="exercise-list">
-        <!-- Exercícios serão adicionados dinamicamente aqui -->
-      </div>
+      <div class="exercise-list"></div>
       <form class="add-exercise-form">
         <input type="text" placeholder="Nome do Exercício" required>
         <input type="number" placeholder="Séries" min="1" required>
@@ -146,7 +154,6 @@ document.addEventListener('DOMContentLoaded', () => {
       </form>
     `;
 
-    // Adiciona evento para submissão do formulário de adicionar exercício
     const addExerciseForm = workoutDiv.querySelector('.add-exercise-form');
     addExerciseForm.addEventListener('submit', (e) => {
       e.preventDefault();
@@ -171,36 +178,31 @@ document.addEventListener('DOMContentLoaded', () => {
       `;
       workoutDiv.querySelector('.exercise-list').appendChild(exerciseItem);
 
-      // Adiciona evento para remover exercício
       const removeExerciseBtn = exerciseItem.querySelector('.remove-exercise-btn');
       removeExerciseBtn.addEventListener('click', () => {
         exerciseItem.remove();
       });
 
-      // Limpa o formulário
       addExerciseForm.reset();
     });
 
-    // Adiciona evento para remover o treino
     const removeWorkoutBtn = workoutDiv.querySelector('.remove-workout-btn');
     removeWorkoutBtn.addEventListener('click', () => {
       workoutDiv.remove();
     });
 
-    workoutList.appendChild(workoutDiv);
+    document.getElementById('workoutList').appendChild(workoutDiv);
   }
 
-  // Adiciona evento para adicionar novo treino quando clicar no botão "+ Novo Treino"
   const addWorkoutBtn = document.getElementById('addWorkoutBtn');
   addWorkoutBtn.addEventListener('click', addWorkout);
 
-  // Evento para alterar a foto de perfil
   const changePictureBtn = document.getElementById('change-picture-btn');
   const fileInput = document.getElementById('file-input');
   const profileImg = document.getElementById('profile-img');
 
   changePictureBtn.addEventListener('click', () => {
-    fileInput.click(); // Simula o clique no input type file para selecionar uma imagem
+    fileInput.click();
   });
 
   fileInput.addEventListener('change', (e) => {

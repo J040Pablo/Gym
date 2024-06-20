@@ -619,7 +619,6 @@ header nav a:hover {
   border: 3px solid #fff;
 }
 
-
 .user-info {
   display: flex;
   align-items: center;
@@ -650,6 +649,23 @@ header nav a:hover {
 
 #change-picture-btn:hover {
   background-color: #0056b3;
+}
+
+/* Novo estilo para o botão de logout */
+#logoutButton {
+  position: absolute;
+  bottom: 136px; /* Ajuste este valor para mover o botão mais para cima */
+  right: 50px;
+  padding: 10px 20px;
+  background-color: red;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px; /* Adiciona bordas arredondadas */
+}
+
+#logoutButton:hover {
+  background-color: darkred;
 }
 
 /* Crie o Seu Treino */
